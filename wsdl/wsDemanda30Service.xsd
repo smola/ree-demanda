@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.2_01-hudson-189-. --><xs:schema xmlns:tns="http://ws.wsDemanda24.ree.es/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.wsDemanda24.ree.es/">
+
+<xs:element name="demandaGeneracion30" type="tns:demandaGeneracion30"></xs:element>
+
+<xs:element name="demandaGeneracion30Response" type="tns:demandaGeneracion30Response"></xs:element>
+
+<xs:element name="eolicaInstalada" type="tns:eolicaInstalada"></xs:element>
+
+<xs:element name="eolicaInstaladaResponse" type="tns:eolicaInstaladaResponse"></xs:element>
+
+<xs:element name="valoresMaxMin" type="tns:valoresMaxMin"></xs:element>
+
+<xs:element name="valoresMaxMinResponse" type="tns:valoresMaxMinResponse"></xs:element>
+
+<xs:complexType name="eolicaInstalada">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="clave" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eolicaInstaladaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="valoresMaxMin">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="clave" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="valoresMaxMinResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:demandaMaxMin" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="demandaMaxMin">
+<xs:sequence>
+<xs:element name="max" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="min" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="timeStampMax" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="timeStampMin" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="demandaGeneracion30">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="clave" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="demandaGeneracion30Response">
+<xs:sequence>
+<xs:element name="return" type="tns:generacionComponentesDiaFino" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generacionComponentesDiaFino">
+<xs:sequence>
+<xs:element name="valoresHorariosGeneracion" type="tns:generacionComponentesFino" nillable="true" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generacionComponentesFino">
+<xs:sequence>
+<xs:element name="autoprod" type="xs:int"></xs:element>
+<xs:element name="carbon" type="xs:int"></xs:element>
+<xs:element name="cicloComb" type="xs:int"></xs:element>
+<xs:element name="demanda" type="xs:int"></xs:element>
+<xs:element name="eolica" type="xs:int"></xs:element>
+<xs:element name="gasFuel" type="xs:int"></xs:element>
+<xs:element name="hidro" type="xs:int"></xs:element>
+<xs:element name="intercambios" type="xs:int"></xs:element>
+<xs:element name="intercambiosCableBal" type="xs:int"></xs:element>
+<xs:element name="nuclear" type="xs:int"></xs:element>
+<xs:element name="solar" type="xs:int"></xs:element>
+<xs:element name="timeStamp" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
